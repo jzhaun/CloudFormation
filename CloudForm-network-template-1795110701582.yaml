@@ -1,0 +1,1443 @@
+---
+Metadata:
+  AWSToolsMetrics:
+    IaC_Generator: "arn:aws:cloudformation:us-east-1:406169238924:generatedTemplate/84071d5f-d56b-45d7-ad02-2eb6715355dc"
+Parameters:
+  EC2LaunchTemplateLaunchTemplateDataDisableApiTermination9qy4V:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether termination protection is enabled for the instance.\
+      \ The default is ``false``, which means that you can terminate the instance\
+      \ using the Amazon EC2 console, command line tools, or API. You can enable termination\
+      \ protection when you launch an instance, while the instance is running, or\
+      \ while the instance is stopped."
+  EC2LaunchTemplateLaunchTemplateDataMaintenanceOptionsAutoRecovery4aRVZ:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Disables the automatic recovery behavior of your instance or sets\
+      \ it to default."
+  EC2LaunchTemplateLaunchTemplateDataNetworkPerformanceOptionsBandwidthWeightingOP1ts:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Specify the bandwidth weighting option to boost the associated type\
+      \ of baseline bandwidth, as follows:\n  + default This option uses the standard\
+      \ bandwidth configuration for your instance type. + vpc-1 This option boosts\
+      \ your networking baseline bandwidth and reduces your EBS baseline bandwidth.\
+      \ + ebs-1 This option boosts your EBS baseline bandwidth and reduces your networking\
+      \ baseline bandwidth."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkInterfaceCountMinjZ1YV:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum number of network interfaces. To specify no minimum\
+      \ limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsMinfcIm5:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum baseline bandwidth, in Mbps. To specify no minimum limit,\
+      \ omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryMiBMax6iBSk:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum amount of memory, in MiB. To specify no maximum limit,\
+      \ omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpEndpointtObLn:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Enables or disables the HTTP metadata endpoint on your instances.\
+      \ If the parameter is not specified, the default state is ``enabled``.\n  If\
+      \ you specify a value of ``disabled``, you will not be able to access your instance\
+      \ metadata."
+  EC2LaunchTemplateLaunchTemplateDataCpuOptionsCoreCountsW4mY:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The number of CPU cores for the instance."
+  EC2LaunchTemplateLaunchTemplateDataCreditSpecificationCpuCreditsPq3uW:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The credit option for CPU usage of a T instance.\n Valid values:\
+      \ ``standard`` | ``unlimited``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsCpuManufacturerswD0kw:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The CPU manufacturers to include.\n  +  For instance types with\
+      \ Intel CPUs, specify ``intel``.\n  +  For instance types with AMD CPUs, specify\
+      \ ``amd``.\n  +  For instance types with AWS CPUs, specify ``amazon-web-services``.\n\
+      \  +  For instance types with Apple CPUs, specify ``apple``.\n  \n  Don't confuse\
+      \ the CPU manufacturer with the CPU architecture. Instances will be launched\
+      \ with a compatible CPU architecture based on the Amazon Machine Image (AMI)\
+      \ that you specify in your launch template.\n  Default: Any manufacturer"
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsMarketTypeDAr7B:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The market type."
+  EC2LaunchTemplateLaunchTemplateDataKernelIdJm6k4:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ID of the kernel.\n We recommend that you use PV-GRUB instead\
+      \ of kernels and RAM disks. For more information, see [User Provided Kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html)\
+      \ in the *Amazon EC2 User Guide*."
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsMaxPriceLmeAD:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The maximum hourly price you're willing to pay for a Spot Instance.\
+      \ We do not recommend using this parameter because it can lead to increased\
+      \ interruptions. If you do not specify this parameter, you will pay the current\
+      \ Spot price. If you do specify this parameter, it must be more than USD $0.001.\
+      \ Specifying a value below USD $0.001 will result in an ``InvalidParameterValue``\
+      \ error message when the launch template is used to launch an instance.\n  If\
+      \ you specify a maximum price, your Spot Instances will be interrupted more\
+      \ frequently than if you do not specify this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkInterfaceCountMaxSt5GU:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum number of network interfaces. To specify no maximum\
+      \ limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsHostnameTypeX82Xo:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The type of hostname for EC2 instances. For IPv4 only subnets, an\
+      \ instance DNS name must be based on the instance IPv4 address. For IPv6 only\
+      \ subnets, an instance DNS name must be based on the instance ID. For dual-stack\
+      \ subnets, you can specify whether DNS names use the instance IPv4 address or\
+      \ the instance ID. For more information, see [Amazon EC2 instance hostname types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html)\
+      \ in the *User Guide*."
+  EC2LaunchTemplateLaunchTemplateDataPlacementAvailabilityZonefCCvG:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Availability Zone for the instance.\n Either ``AvailabilityZone``\
+      \ or ``AvailabilityZoneId`` can be specified, but not both"
+  EC2LaunchTemplateLaunchTemplateDataHibernationOptionsConfigured1V3NZ:
+    NoEcho: "true"
+    Type: "String"
+    Description: "If you set this parameter to ``true``, the instance is enabled for\
+      \ hibernation.\n Default: ``false``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsExcludedInstanceTypes5y5Me:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The instance types to exclude.\n You can use strings with one or\
+      \ more wild cards, represented by an asterisk (``*``), to exclude an instance\
+      \ type, size, or generation. The following are examples: ``m5.8xlarge``, ``c5*.*``,\
+      \ ``m5a.*``, ``r*``, ``*3*``.\n For example, if you specify ``c5*``,Amazon EC2\
+      \ will exclude the entire C5 instance family, which includes all C5a and C5n\
+      \ instance types. If you specify ``m5a.*``, Amazon EC2 will exclude all the\
+      \ M5a instance types, but not the M5n instance types.\n  If you specify ``ExcludedInstanceTypes``,\
+      \ you can't specify ``AllowedInstanceTypes``.\n  Default: No excluded instance\
+      \ types"
+  EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetCapacityReservationResourceGroupArnCsTXY:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the Capacity Reservation resource group in which to run\
+      \ the instance."
+  EC2LaunchTemplateLaunchTemplateDataKeyNameY7tBF:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The name of the key pair. You can create a key pair using [CreateKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateKeyPair.html)\
+      \ or [ImportKeyPair](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportKeyPair.html).\n\
+      \  If you do not specify a key pair, you can't connect to the instance unless\
+      \ you choose an AMI that is configured to allow users another way to log in."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersjUqRQ:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "Indicates whether instance types must have accelerators by specific\
+      \ manufacturers.\n  +  For instance types with AWS devices, specify ``amazon-web-services``.\n\
+      \  +  For instance types with AMD devices, specify ``amd``.\n  +  For instance\
+      \ types with Habana devices, specify ``habana``.\n  +  For instance types with\
+      \ NVIDIA devices, specify ``nvidia``.\n  +  For instance types with Xilinx devices,\
+      \ specify ``xilinx``.\n  \n Default: Any manufacturer"
+  EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpPutResponseHopLimitip8rG:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The desired HTTP PUT response hop limit for instance metadata requests.\
+      \ The larger the number, the further instance metadata requests can travel.\n\
+      \ Default: ``1``\n Possible values: Integers from 1 to 64"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTypessd6Ia:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The accelerator types that must be on the instance type.\n  +  For\
+      \ instance types with FPGA accelerators, specify ``fpga``.\n  +  For instance\
+      \ types with GPU accelerators, specify ``gpu``.\n  +  For instance types with\
+      \ Inference accelerators, specify ``inference``.\n  +  For instance types with\
+      \ Media accelerators, specify ``media``.\n  \n Default: Any accelerator type"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryMiBMinsqSTR:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum amount of memory, in MiB. To specify no minimum limit,\
+      \ specify ``0``."
+  EC2LaunchTemplateLaunchTemplateDataCpuOptionsAmdSevSnpZopLh:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether to enable the instance for AMD SEV-SNP. AMD SEV-SNP\
+      \ is supported with M6a, R6a, and C6a instance types only. For more information,\
+      \ see [AMD SEV-SNP for Amazon EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sev-snp.html).Possible\
+      \ values: [enabled, disabled]\nThis property can be replaced with other types"
+  EC2LaunchTemplateLaunchTemplateDataPlacementGroupIdnXHEN:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Group Id of a placement group. You must specify the Placement\
+      \ Group *Group Id* to launch an instance in a shared placement group."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsOnDemandMaxPricePercentageOverLowestPriceg01pt:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "[Price protection] The price protection threshold for On-Demand\
+      \ Instances, as a percentage higher than an identified On-Demand price. The\
+      \ identified On-Demand price is the price of the lowest priced current generation\
+      \ C, M, or R instance type with your specified attributes. When Amazon EC2 selects\
+      \ instance types with your attributes, it will exclude instance types whose\
+      \ price exceeds your specified threshold.\n The parameter accepts an integer,\
+      \ which Amazon EC2 interprets as a percentage.\n To turn off price protection,\
+      \ specify a high value, such as ``999999``.\n This parameter is not supported\
+      \ for [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)\
+      \ and [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html).\n\
+      \  If you set ``TargetCapacityUnitType`` to ``vcpu`` or ``memory-mib``, the\
+      \ price protection threshold is applied based on the per-vCPU or per-memory\
+      \ price instead of the per-instance price.\n  Default: ``20``"
+  EC2LaunchTemplateLaunchTemplateDataIamInstanceProfileNameonJyT:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The name of the instance profile."
+  EC2LaunchTemplateLaunchTemplateDataPlacementHostResourceGroupArnZmgA7:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ARN of the host resource group in which to launch the instances.\
+      \ If you specify a host resource group ARN, omit the *Tenancy* parameter or\
+      \ set it to ``host``."
+  EC2LaunchTemplateLaunchTemplateDataPlacementSpreadDomainhdzR9:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Reserved for future use."
+  EC2LaunchTemplateLaunchTemplateDataRamDiskIdEjgty:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ID of the RAM disk.\n  We recommend that you use PV-GRUB instead\
+      \ of kernels and RAM disks. For more information, see [User provided kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html)\
+      \ in the *Amazon EC2 User Guide*."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBurstablePerformanceoJBNQ:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether burstable performance T instance types are included,\
+      \ excluded, or required. For more information, see [Burstable performance instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html).\n\
+      \  +  To include burstable performance instance types, specify ``included``.\n\
+      \  +  To require only burstable performance instance types, specify ``required``.\n\
+      \  +  To exclude burstable performance instance types, specify ``excluded``.\n\
+      \  \n Default: ``excluded``"
+  EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpProtocolIpv6UKQ7w:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Enables or disables the IPv6 endpoint for the instance metadata\
+      \ service.\n Default: ``disabled``"
+  EC2LaunchTemplateLaunchTemplateDataEbsOptimizedfnRKV:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether the instance is optimized for Amazon EBS I/O.\
+      \ This optimization provides dedicated throughput to Amazon EBS and an optimized\
+      \ configuration stack to provide optimal Amazon EBS I/O performance. This optimization\
+      \ isn't available with all instance types. Additional usage charges apply when\
+      \ using an EBS-optimized instance."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbpsMaxYYhuA:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum amount of network bandwidth, in Gbps. To specify no\
+      \ maximum limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsMaxqsluF:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum baseline bandwidth, in Mbps. To specify no maximum limit,\
+      \ omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsValidUntilzm1Jt:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The end date of the request, in UTC format (*YYYY-MM-DD*T*HH:MM:SS*Z).\
+      \ Supported only for persistent requests.\n  +  For a persistent request, the\
+      \ request remains active until the ``ValidUntil`` date and time is reached.\
+      \ Otherwise, the request remains active until you cancel it.\n  +  For a one-time\
+      \ request, ``ValidUntil`` is not supported. The request remains active until\
+      \ all instances launch or you cancel the request.\n  \n Default: 7 days from\
+      \ the current date"
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypej2QHi:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Spot Instance request type.\n If you are using Spot Instances\
+      \ with an Auto Scaling group, use ``one-time`` requests, as the ASlong service\
+      \ handles requesting new Spot Instances whenever the group is below its desired\
+      \ capacity."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAllowedInstanceTypesVLuYA:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The instance types to apply your specified attributes against. All\
+      \ other instance types are ignored, even if they match your specified attributes.\n\
+      \ You can use strings with one or more wild cards, represented by an asterisk\
+      \ (``*``), to allow an instance type, size, or generation. The following are\
+      \ examples: ``m5.8xlarge``, ``c5*.*``, ``m5a.*``, ``r*``, ``*3*``.\n For example,\
+      \ if you specify ``c5*``,Amazon EC2 will allow the entire C5 instance family,\
+      \ which includes all C5a and C5n instance types. If you specify ``m5a.*``, Amazon\
+      \ EC2 will allow all the M5a instance types, but not the M5n instance types.\n\
+      \  If you specify ``AllowedInstanceTypes``, you can't specify ``ExcludedInstanceTypes``.\n\
+      \  Default: All instance types"
+  EC2LaunchTemplateLaunchTemplateDataImageIdqpEhZ:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ID of the AMI. Alternatively, you can specify a Systems Manager\
+      \ parameter, which will resolve to an AMI ID on launch.\n Valid formats:\n \
+      \ +   ``ami-0ac394d6a3example`` \n  +   ``resolve:ssm:parameter-name`` \n  +\
+      \   ``resolve:ssm:parameter-name:version-number`` \n  +   ``resolve:ssm:parameter-name:label``\
+      \ \n  \n For more information, see [Use a Systems Manager parameter to find\
+      \ an AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#using-systems-manager-parameter-to-find-AMI)\
+      \ in the *Amazon Elastic Compute Cloud User Guide*."
+  EC2LaunchTemplateLaunchTemplateDataSecurityGroupsaLbjX:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The names of the security groups. For a nondefault VPC, you must\
+      \ use security group IDs instead.\n If you specify a network interface, you\
+      \ must specify any security groups as part of the network interface instead\
+      \ of using this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBareMetal8cE9i:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether bare metal instance types must be included, excluded,\
+      \ or required.\n  +  To include bare metal instance types, specify ``included``.\n\
+      \  +  To require only bare metal instance types, specify ``required``.\n  +\
+      \  To exclude bare metal instance types, specify ``excluded``.\n  \n Default:\
+      \ ``excluded``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsRequireHibernateSupport9PMU4:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether instance types must support hibernation for On-Demand\
+      \ Instances.\n This parameter is not supported for [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html).\n\
+      \ Default: ``false``"
+  EC2LaunchTemplateLaunchTemplateDataPlacementAffinityOI94z:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The affinity setting for an instance on a Dedicated Host."
+  EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsEnableResourceNameDnsAAAARecordOLbPx:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether to respond to DNS queries for instance hostnames\
+      \ with DNS AAAA records."
+  EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsEnableResourceNameDnsARecordciG8J:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether to respond to DNS queries for instance hostnames\
+      \ with DNS A records."
+  EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceCwJ1a:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates the instance's Capacity Reservation preferences. Possible\
+      \ preferences include:\n  +  ``capacity-reservations-only`` - The instance will\
+      \ only run in a Capacity Reservation or Capacity Reservation group. If capacity\
+      \ isn't available, the instance will fail to launch.\n  +  ``open`` - The instance\
+      \ can run in any ``open`` Capacity Reservation that has matching attributes\
+      \ (instance type, platform, Availability Zone, tenancy).\n  +  ``none`` - The\
+      \ instance avoids running in a Capacity Reservation even if one is available.\
+      \ The instance runs in On-Demand capacity."
+  EC2LaunchTemplateLaunchTemplateDataPlacementGroupNameJygqV:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The name of the placement group for the instance."
+  EC2LaunchTemplateLaunchTemplateDataIamInstanceProfileArnWnDnC:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The Amazon Resource Name (ARN) of the instance profile."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsLocalStoragehh7Vw:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether instance types with instance store volumes are\
+      \ included, excluded, or required. For more information, [Amazon EC2 instance\
+      \ store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html)\
+      \ in the *Amazon EC2 User Guide*.\n  +  To include instance types with instance\
+      \ store volumes, specify ``included``.\n  +  To require only instance types\
+      \ with instance store volumes, specify ``required``.\n  +  To exclude instance\
+      \ types with instance store volumes, specify ``excluded``.\n  \n Default: ``included``"
+  EC2LaunchTemplateLaunchTemplateDataPlacementHostIdmssM9:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ID of the Dedicated Host for the instance."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsTotalLocalStorageGBMaxw4Kis:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum amount of total local storage, in GB. To specify no\
+      \ maximum limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceTypeP7t0S:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The instance type. For more information, see [Amazon EC2 instance\
+      \ types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)\
+      \ in the *Amazon EC2 User Guide*.\n If you specify ``InstanceType``, you can't\
+      \ specify ``InstanceRequirements``."
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorfOCRp:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The behavior when a Spot Instance is interrupted. The default is\
+      \ ``terminate``."
+  EC2LaunchTemplateLaunchTemplateDataPlacementPartitionNumbergO4Iq:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The number of the partition the instance should launch in. Valid\
+      \ only if the placement group strategy is set to ``partition``."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuMinYACwN:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum amount of memory per vCPU, in GiB. To specify no minimum\
+      \ limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataMonitoringEnableddhiZE:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Specify ``true`` to enable detailed monitoring. Otherwise, basic\
+      \ monitoring is enabled."
+  EC2LaunchTemplateLaunchTemplateDataCpuOptionsThreadsPerCorej3dH2:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The number of threads per CPU core. To disable multithreading for\
+      \ the instance, specify a value of ``1``. Otherwise, specify the default value\
+      \ of ``2``."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorNamesD6xbc:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The accelerators that must be on the instance type.\n  +  For instance\
+      \ types with NVIDIA A10G GPUs, specify ``a10g``.\n  +  For instance types with\
+      \ NVIDIA A100 GPUs, specify ``a100``.\n  +  For instance types with NVIDIA H100\
+      \ GPUs, specify ``h100``.\n  +  For instance types with AWS Inferentia chips,\
+      \ specify ``inferentia``.\n  +  For instance types with AWS Inferentia2 chips,\
+      \ specify ``inferentia2``.\n  +  For instance types with Habana Gaudi HL-205\
+      \ GPUs, specify ``gaudi-hl-205``.\n  +  For instance types with NVIDIA GRID\
+      \ K520 GPUs, specify ``k520``.\n  +  For instance types with NVIDIA K80 GPUs,\
+      \ specify ``k80``.\n  +  For instance types with NVIDIA L4 GPUs, specify ``l4``.\n\
+      \  +  For instance types with NVIDIA L40S GPUs, specify ``l40s``.\n  +  For\
+      \ instance types with NVIDIA M60 GPUs, specify ``m60``.\n  +  For instance types\
+      \ with AMD Radeon Pro V520 GPUs, specify ``radeon-pro-v520``.\n  +  For instance\
+      \ types with AWS Trainium chips, specify ``trainium``.\n  +  For instance types\
+      \ with AWS Trainium2 chips, specify ``trainium2``.\n  +  For instance types\
+      \ with NVIDIA T4 GPUs, specify ``t4``.\n  +  For instance types with NVIDIA\
+      \ T4G GPUs, specify ``t4g``.\n  +  For instance types with Xilinx U30 cards,\
+      \ specify ``u30``.\n  +  For instance types with Xilinx VU9P FPGAs, specify\
+      \ ``vu9p``.\n  +  For instance types with NVIDIA V100 GPUs, specify ``v100``.\n\
+      \  \n Default: Any accelerator"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsVCpuCountMinsRwe9:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum number of vCPUs. To specify no minimum limit, specify\
+      \ ``0``."
+  EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetCapacityReservationIdGVXdV:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The ID of the Capacity Reservation in which to run the instance."
+  EC2LaunchTemplateLaunchTemplateDataDisableApiStopZEOfB:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether to enable the instance for stop protection. For\
+      \ more information, see [Enable stop protection for your EC2 instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-stop-protection.html)\
+      \ in the *Amazon EC2 User Guide*."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsSpotMaxPricePercentageOverLowestPricepgwsn:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "[Price protection] The price protection threshold for Spot Instances,\
+      \ as a percentage higher than an identified Spot price. The identified Spot\
+      \ price is the Spot price of the lowest priced current generation C, M, or R\
+      \ instance type with your specified attributes. If no current generation C,\
+      \ M, or R instance type matches your attributes, then the identified Spot price\
+      \ is from the lowest priced current generation instance types, and failing that,\
+      \ from the lowest priced previous generation instance types that match your\
+      \ attributes. When Amazon EC2 selects instance types with your attributes, it\
+      \ will exclude instance types whose Spot price exceeds your specified threshold.\n\
+      \ The parameter accepts an integer, which Amazon EC2 interprets as a percentage.\n\
+      \ If you set ``TargetCapacityUnitType`` to ``vcpu`` or ``memory-mib``, the price\
+      \ protection threshold is applied based on the per-vCPU or per-memory price\
+      \ instead of the per-instance price.\n This parameter is not supported for [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html)\
+      \ and [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html).\n\
+      \  Only one of ``SpotMaxPricePercentageOverLowestPrice`` or ``MaxSpotPriceAsPercentageOfOptimalOnDemandPrice``\
+      \ can be specified. If you don't specify either, Amazon EC2 will automatically\
+      \ apply optimal price protection to consistently select from a wide range of\
+      \ instance types. To indicate no price protection threshold for Spot Instances,\
+      \ meaning you want to consider all instance types that match your attributes,\
+      \ include one of these parameters and specify a high value, such as ``999999``.\n\
+      \  Default: ``100``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceInitiatedShutdownBehaviorW5AtD:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether an instance stops or terminates when you initiate\
+      \ shutdown from the instance (using the operating system command for system\
+      \ shutdown).\n Default: ``stop``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsBlockDurationMinuteswPmUe:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "Deprecated."
+  EC2LaunchTemplateLaunchTemplateDataPlacementTenancyeetTH:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The tenancy of the instance. An instance with a tenancy of dedicated\
+      \ runs on single-tenant hardware."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuMaxvT7S4:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum amount of memory per vCPU, in GiB. To specify no maximum\
+      \ limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMaxSpotPriceAsPercentageOfOptimalOnDemandPrice53GY2:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "[Price protection] The price protection threshold for Spot Instances,\
+      \ as a percentage of an identified On-Demand price. The identified On-Demand\
+      \ price is the price of the lowest priced current generation C, M, or R instance\
+      \ type with your specified attributes. If no current generation C, M, or R instance\
+      \ type matches your attributes, then the identified price is from the lowest\
+      \ priced current generation instance types, and failing that, from the lowest\
+      \ priced previous generation instance types that match your attributes. When\
+      \ Amazon EC2 selects instance types with your attributes, it will exclude instance\
+      \ types whose price exceeds your specified threshold.\n The parameter accepts\
+      \ an integer, which Amazon EC2 interprets as a percentage.\n If you set ``TargetCapacityUnitType``\
+      \ to ``vcpu`` or ``memory-mib``, the price protection threshold is based on\
+      \ the per vCPU or per memory price instead of the per instance price.\n  Only\
+      \ one of ``SpotMaxPricePercentageOverLowestPrice`` or ``MaxSpotPriceAsPercentageOfOptimalOnDemandPrice``\
+      \ can be specified. If you don't specify either, Amazon EC2 will automatically\
+      \ apply optimal price protection to consistently select from a wide range of\
+      \ instance types. To indicate no price protection threshold for Spot Instances,\
+      \ meaning you want to consider all instance types that match your attributes,\
+      \ include one of these parameters and specify a high value, such as ``999999``."
+  EC2LaunchTemplateLaunchTemplateDataUserDatamkoMT:
+    NoEcho: "true"
+    Type: "String"
+    Description: "The user data to make available to the instance. You must provide\
+      \ base64-encoded text. User data is limited to 16 KB. For more information,\
+      \ see [Run commands when you launch an EC2 instance with user data input](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)\
+      \ in the *Amazon EC2 User Guide*.\n If you are creating the launch template\
+      \ for use with BATCH, the user data must be provided in the [MIME multi-part\
+      \ archive format](https://docs.aws.amazon.com/https://cloudinit.readthedocs.io/en/latest/topics/format.html#mime-multi-part-archive).\
+      \ For more information, see [Amazon EC2 user data in launch templates](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html#lt-user-data)\
+      \ in the *User Guide*."
+  EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpTokenslLXgX:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether IMDSv2 is required.\n  +  ``optional`` - IMDSv2\
+      \ is optional. You can choose whether to send a session token in your instance\
+      \ metadata retrieval requests. If you retrieve IAM role credentials without\
+      \ a session token, you receive the IMDSv1 role credentials. If you retrieve\
+      \ IAM role credentials using a valid session token, you receive the IMDSv2 role\
+      \ credentials.\n  +  ``required`` - IMDSv2 is required. You must send a session\
+      \ token in your instance metadata retrieval requests. With this option, retrieving\
+      \ the IAM role credentials always returns IMDSv2 credentials; IMDSv1 credentials\
+      \ are not available.\n  \n Default: If the value of ``ImdsSupport`` for the\
+      \ Amazon Machine Image (AMI) for your instance is ``v2.0``, the default is ``required``."
+  EC2LaunchTemplateLaunchTemplateDataMetadataOptionsInstanceMetadataTagsnSGWg:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Set to ``enabled`` to allow access to instance tags from the instance\
+      \ metadata. Set to ``disabled`` to turn off access to instance tags from the\
+      \ instance metadata. For more information, see [View tags for your EC2 instances\
+      \ using instance metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/work-with-tags-in-IMDS.html).\n\
+      \ Default: ``disabled``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorCountMinCSXMl:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum number of accelerators. To specify no minimum limit,\
+      \ omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataSecurityGroupIdsKFYJO:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The IDs of the security groups. You can specify the IDs of existing\
+      \ security groups and references to resources created by the stack template.\n\
+      \ If you specify a network interface, you must specify any security groups as\
+      \ part of the network interface instead."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBMinl305O:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum amount of accelerator memory, in MiB. To specify no\
+      \ minimum limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsVCpuCountMaxDLetL:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum number of vCPUs. To specify no maximum limit, omit this\
+      \ parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsInstanceGenerationsqlpI0:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "Indicates whether current or previous generation instance types\
+      \ are included. The current generation instance types are recommended for use.\
+      \ Current generation instance types are typically the latest two to three generations\
+      \ in each instance family. For more information, see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)\
+      \ in the *Amazon EC2 User Guide*.\n For current generation instance types, specify\
+      \ ``current``.\n For previous generation instance types, specify ``previous``.\n\
+      \ Default: Current and previous generation instance types"
+  EC2LaunchTemplateLaunchTemplateDataEnclaveOptionsEnableduvpBV:
+    NoEcho: "true"
+    Type: "String"
+    Description: "If this parameter is set to ``true``, the instance is enabled for\
+      \ AWS Nitro Enclaves; otherwise, it is not enabled for AWS Nitro Enclaves."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsLocalStorageTypesclvQp:
+    NoEcho: "true"
+    Type: "CommaDelimitedList"
+    Description: "The type of local storage that is required.\n  +  For instance types\
+      \ with hard disk drive (HDD) storage, specify ``hdd``.\n  +  For instance types\
+      \ with solid state drive (SSD) storage, specify ``ssd``.\n  \n Default: ``hdd``\
+      \ and ``ssd``"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorCountMaxUQ2qY:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum number of accelerators. To specify no maximum limit,\
+      \ omit this parameter. To exclude accelerator-enabled instance types, set ``Max``\
+      \ to ``0``."
+  EC2LaunchTemplateLaunchTemplateDataCpuOptionsNestedVirtualization08RFZ:
+    NoEcho: "true"
+    Type: "String"
+    Description: "Indicates whether the instance is enabled for nested virtualization.Possible\
+      \ values: [enabled, disabled]\nThis property can be replaced with other types"
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbpsMinhsL1R:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum amount of network bandwidth, in Gbps. If this parameter\
+      \ is not specified, there is no minimum limit."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBMax70fwY:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The maximum amount of accelerator memory, in MiB. To specify no\
+      \ maximum limit, omit this parameter."
+  EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsTotalLocalStorageGBMinOCwN8:
+    NoEcho: "true"
+    Type: "Number"
+    Description: "The minimum amount of total local storage, in GB. To specify no\
+      \ minimum limit, omit this parameter."
+Resources:
+  EC2VPCGatewayAttachmentIGW:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPCGatewayAttachment"
+    DeletionPolicy: "Retain"
+    Properties:
+      InternetGatewayId: "igw-0d3bc570aeb862c40"
+      VpcId: "vpc-09be6980fce5b6fad"
+  RDSDBSubnetGroupDefaultvpc09be6980fce5b6fad:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::RDS::DBSubnetGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      DBSubnetGroupDescription: "Created from the RDS Management Console"
+      SubnetIds:
+      - "subnet-040f85bccd4e2d831"
+      - "subnet-0d43c52321065867b"
+      - "subnet-083ccabf43890470d"
+      - "subnet-02d27dc1a60888cdc"
+      DBSubnetGroupName: "default-vpc-09be6980fce5b6fad"
+  EC2SubnetRouteTableAssociationB1:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetRouteTableAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      RouteTableId: "rtb-08cbba9c3ce2acef4"
+      SubnetId: "subnet-02d27dc1a60888cdc"
+  IAMRoleElb:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::Role"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      ManagedPolicyArns:
+      - "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+      MaxSessionDuration: 3600
+      RoleName: "elb"
+      Description: "Allows EC2 instances to call AWS services on your behalf."
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+        - Action: "sts:AssumeRole"
+          Effect: "Allow"
+          Principal:
+            Service: "ec2.amazonaws.com"
+  EC2RouteOS:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      DestinationPrefixListId: "pl-63a5400a"
+      VpcEndpointId: "vpce-0cd01815aa1577176"
+      RouteTableId: "rtb-0c88931309c81184b"
+  EC2RouteWX:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      RouteTableId: "rtb-0c88931309c81184b"
+      DestinationCidrBlock: "10.0.0.0/16"
+      GatewayId: "local"
+      VpcEndpointId: "local"
+  EC2SubnetNetworkAclAssociation:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId: "acl-089e20dd665e32b3f"
+      SubnetId: "subnet-040f85bccd4e2d831"
+  EC2RouteTableEf:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::RouteTable"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId: "vpc-09be6980fce5b6fad"
+  EC2NatGateway:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::NatGateway"
+    DeletionPolicy: "Retain"
+    Properties:
+      ConnectivityType: "public"
+      VpcId: "vpc-09be6980fce5b6fad"
+      AvailabilityZoneAddresses:
+      - AvailabilityZoneId: "use1-az2"
+        AvailabilityZone: "us-east-1b"
+        AllocationIds:
+        - "eipalloc-0488bec52bdd1999e"
+      - AvailabilityZoneId: "use1-az1"
+        AvailabilityZone: "us-east-1a"
+        AllocationIds:
+        - "eipalloc-0bc8086d5db81dc10"
+      AvailabilityMode: "regional"
+      Tags:
+      - Value: "step 4-regional-nat"
+        Key: "Name"
+  EC2SubnetRouteTableAssociationAA:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetRouteTableAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      RouteTableId: "rtb-0c88931309c81184b"
+      SubnetId: "subnet-0d43c52321065867b"
+  EC2VPCLR:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPC"
+    DeletionPolicy: "Retain"
+    Properties:
+      CidrBlock: "10.0.0.0/16"
+      EnableDnsSupport: true
+      InstanceTenancy: "default"
+      EnableDnsHostnames: true
+      Tags:
+      - Value: "ELB HW-vpc"
+        Key: "Name"
+  EC2SubnetNetworkAclAssociationBr:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId: "acl-089e20dd665e32b3f"
+      SubnetId: "subnet-083ccabf43890470d"
+  EC2RouteQz:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      RouteTableId: "rtb-052101dae96761fe9"
+      DestinationCidrBlock: "10.0.0.0/16"
+      GatewayId: "local"
+      VpcEndpointId: "local"
+  EC2RouteRW:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      RouteTableId: "rtb-0eedd1a2952f1e9b5"
+      DestinationCidrBlock: "10.0.0.0/16"
+      GatewayId: "local"
+      VpcEndpointId: "local"
+  EC2RouteIn:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      NatGatewayId: "nat-1b44212e0561e9a8c"
+      RouteTableId: "rtb-0c88931309c81184b"
+      DestinationCidrBlock: "0.0.0.0/0"
+  EC2SubnetIc:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: false
+      EnableDns64: false
+      VpcId: "vpc-09be6980fce5b6fad"
+      AvailabilityZoneId: "use1-az1"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      AvailabilityZone: "us-east-1a"
+      CidrBlock: "10.0.0.0/24"
+      Ipv6Native: false
+      Tags:
+      - Value: "step 4-subnet-public1-us-east-1a"
+        Key: "Name"
+  EC2DHCPOptions:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::DHCPOptions"
+    DeletionPolicy: "Retain"
+    Properties:
+      DomainName: "ec2.internal"
+      DomainNameServers:
+      - "AmazonProvidedDNS"
+      Tags: []
+  EC2Route:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      NatGatewayId: "nat-1b44212e0561e9a8c"
+      RouteTableId: "rtb-052101dae96761fe9"
+      DestinationCidrBlock: "0.0.0.0/0"
+  EC2SubnetNetworkAclAssociationEC:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId: "acl-089e20dd665e32b3f"
+      SubnetId: "subnet-0d43c52321065867b"
+  EC2SubnetVE:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: false
+      EnableDns64: false
+      VpcId: "vpc-09be6980fce5b6fad"
+      AvailabilityZoneId: "use1-az2"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      AvailabilityZone: "us-east-1b"
+      CidrBlock: "10.0.4.0/23"
+      Ipv6Native: false
+      Tags:
+      - Value: "step 4-subnet-private2-us-east-1b"
+        Key: "Name"
+  EC2VPCCidrBlock:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPCCidrBlock"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId: "vpc-09be6980fce5b6fad"
+      CidrBlock: "10.0.0.0/16"
+  EC2VPCDHCPOptionsAssociation:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPCDHCPOptionsAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId: "vpc-09be6980fce5b6fad"
+      DhcpOptionsId: "dopt-003c0a572f49c0b50"
+  EC2InternetGateway:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::InternetGateway"
+    DeletionPolicy: "Retain"
+    Properties:
+      Tags:
+      - Value: "step 4-igw"
+        Key: "Name"
+  EC2SecurityGroupKV:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "allows load balancer "
+      GroupName: "webserver-sg"
+      VpcId: "vpc-0aee165adde7fd341"
+      SecurityGroupIngress:
+      - IpProtocol: "tcp"
+        FromPort: 80
+        SourceSecurityGroupId: "sg-0954423fdd5e33d7e"
+        ToPort: 80
+        SourceSecurityGroupOwnerId: "406169238924"
+  EC2SubnetRouteTableAssociation:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetRouteTableAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      RouteTableId: "rtb-08cbba9c3ce2acef4"
+      SubnetId: "subnet-040f85bccd4e2d831"
+  EC2NetworkAcl:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::NetworkAcl"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId: "vpc-09be6980fce5b6fad"
+      Tags: []
+  EC2VPCEndpoint:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPCEndpoint"
+    DeletionPolicy: "Retain"
+    Properties:
+      PrivateDnsEnabled: false
+      IpAddressType: "ipv4"
+      ServiceRegion: "us-east-1"
+      DnsOptions:
+        PrivateDnsOnlyForInboundResolverEndpoint: "NotSpecified"
+        PrivateDnsSpecifiedDomains:
+        - "*"
+        DnsRecordIpType: "service-defined"
+        PrivateDnsPreference: "VERIFIED_DOMAINS_ONLY"
+      ResourceConfigurationArn: ""
+      SecurityGroupIds: []
+      SubnetIds: []
+      ServiceNetworkArn: ""
+      VpcId: "vpc-09be6980fce5b6fad"
+      RouteTableIds:
+      - Ref: "EC2RouteTableKY"
+      - Ref: "EC2RouteTable"
+      ServiceName: "com.amazonaws.us-east-1.s3"
+      PolicyDocument:
+        Version: "2008-10-17"
+        Statement:
+        - Resource: "*"
+          Action: "*"
+          Effect: "Allow"
+          Principal: "*"
+      VpcEndpointType: "Gateway"
+      Tags:
+      - Value: "step 4-vpce-s3"
+        Key: "Name"
+  Route53ResolverResolverRuleAssociation:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::Route53Resolver::ResolverRuleAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      VPCId: "vpc-09be6980fce5b6fad"
+      ResolverRuleId: "rslvr-autodefined-rr-internet-resolver"
+      Name: "System Rule Association"
+  RDSDBParameterGroupDefaultmariadb106:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::RDS::DBParameterGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      DBParameterGroupName: "default.mariadb10.6"
+      Family: "mariadb10.6"
+      Description: "Default parameter group for mariadb10.6"
+      Parameters: {}
+  EC2Subnet:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: false
+      EnableDns64: false
+      VpcId: "vpc-09be6980fce5b6fad"
+      AvailabilityZoneId: "use1-az2"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      AvailabilityZone: "us-east-1b"
+      CidrBlock: "10.0.1.0/24"
+      Ipv6Native: false
+      Tags:
+      - Value: "step 4-subnet-public2-us-east-1b"
+        Key: "Name"
+  EC2SecurityGroup:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "default VPC security group"
+      GroupName: "default"
+      VpcId: "vpc-09be6980fce5b6fad"
+      SecurityGroupIngress:
+      - SourceSecurityGroupId: "sg-092fa65853b216a46"
+        IpProtocol: "-1"
+        SourceSecurityGroupOwnerId: "406169238924"
+      SecurityGroupEgress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "-1"
+  EC2RouteUS:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      GatewayId: "igw-0d3bc570aeb862c40"
+      RouteTableId: "rtb-08cbba9c3ce2acef4"
+      DestinationCidrBlock: "0.0.0.0/0"
+  EC2RouteTableWb:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::RouteTable"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId: "vpc-09be6980fce5b6fad"
+      Tags:
+      - Value: "step 4-rtb-public"
+        Key: "Name"
+  EC2LaunchTemplate:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::LaunchTemplate"
+    DeletionPolicy: "Retain"
+    Properties:
+      LaunchTemplateData:
+        SecurityGroups:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataSecurityGroupsaLbjX"
+        NetworkPerformanceOptions:
+          BandwidthWeighting:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataNetworkPerformanceOptionsBandwidthWeightingOP1ts"
+        UserData:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataUserDatamkoMT"
+        MaintenanceOptions:
+          AutoRecovery:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMaintenanceOptionsAutoRecovery4aRVZ"
+        IamInstanceProfile:
+          Arn:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataIamInstanceProfileArnWnDnC"
+          Name:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataIamInstanceProfileNameonJyT"
+        KernelId:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataKernelIdJm6k4"
+        EbsOptimized:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataEbsOptimizedfnRKV"
+        Placement:
+          Tenancy:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementTenancyeetTH"
+          GroupName:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementGroupNameJygqV"
+          SpreadDomain:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementSpreadDomainhdzR9"
+          PartitionNumber:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementPartitionNumbergO4Iq"
+          Affinity:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementAffinityOI94z"
+          AvailabilityZone:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementAvailabilityZonefCCvG"
+          HostResourceGroupArn:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementHostResourceGroupArnZmgA7"
+          HostId:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementHostIdmssM9"
+          GroupId:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPlacementGroupIdnXHEN"
+        EnclaveOptions:
+          Enabled:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataEnclaveOptionsEnableduvpBV"
+        ImageId:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataImageIdqpEhZ"
+        InstanceType:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceTypeP7t0S"
+        Monitoring:
+          Enabled:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMonitoringEnableddhiZE"
+        HibernationOptions:
+          Configured:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataHibernationOptionsConfigured1V3NZ"
+        MetadataOptions:
+          HttpPutResponseHopLimit:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpPutResponseHopLimitip8rG"
+          HttpTokens:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpTokenslLXgX"
+          HttpProtocolIpv6:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpProtocolIpv6UKQ7w"
+          InstanceMetadataTags:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMetadataOptionsInstanceMetadataTagsnSGWg"
+          HttpEndpoint:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataMetadataOptionsHttpEndpointtObLn"
+        DisableApiStop:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataDisableApiStopZEOfB"
+        InstanceInitiatedShutdownBehavior:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceInitiatedShutdownBehaviorW5AtD"
+        CpuOptions:
+          ThreadsPerCore:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCpuOptionsThreadsPerCorej3dH2"
+          AmdSevSnp:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCpuOptionsAmdSevSnpZopLh"
+          CoreCount:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCpuOptionsCoreCountsW4mY"
+          NestedVirtualization:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCpuOptionsNestedVirtualization08RFZ"
+        PrivateDnsNameOptions:
+          EnableResourceNameDnsARecord:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsEnableResourceNameDnsARecordciG8J"
+          HostnameType:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsHostnameTypeX82Xo"
+          EnableResourceNameDnsAAAARecord:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataPrivateDnsNameOptionsEnableResourceNameDnsAAAARecordOLbPx"
+        SecurityGroupIds:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataSecurityGroupIdsKFYJO"
+        KeyName:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataKeyNameY7tBF"
+        DisableApiTermination:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataDisableApiTermination9qy4V"
+        InstanceMarketOptions:
+          SpotOptions:
+            InstanceInterruptionBehavior:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsInstanceInterruptionBehaviorfOCRp"
+            MaxPrice:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsMaxPriceLmeAD"
+            SpotInstanceType:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsSpotInstanceTypej2QHi"
+            BlockDurationMinutes:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsBlockDurationMinuteswPmUe"
+            ValidUntil:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsSpotOptionsValidUntilzm1Jt"
+          MarketType:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceMarketOptionsMarketTypeDAr7B"
+        InstanceRequirements:
+          LocalStorageTypes:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsLocalStorageTypesclvQp"
+          InstanceGenerations:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsInstanceGenerationsqlpI0"
+          NetworkInterfaceCount:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkInterfaceCountMaxSt5GU"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkInterfaceCountMinjZ1YV"
+          MemoryGiBPerVCpu:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuMaxvT7S4"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuMinYACwN"
+          AcceleratorTypes:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTypessd6Ia"
+          VCpuCount:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsVCpuCountMaxDLetL"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsVCpuCountMinsRwe9"
+          ExcludedInstanceTypes:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsExcludedInstanceTypes5y5Me"
+          AcceleratorManufacturers:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorManufacturersjUqRQ"
+          AllowedInstanceTypes:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAllowedInstanceTypesVLuYA"
+          LocalStorage:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsLocalStoragehh7Vw"
+          CpuManufacturers:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsCpuManufacturerswD0kw"
+          NetworkBandwidthGbps:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbpsMaxYYhuA"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsNetworkBandwidthGbpsMinhsL1R"
+          AcceleratorCount:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorCountMaxUQ2qY"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorCountMinCSXMl"
+          BareMetal:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBareMetal8cE9i"
+          RequireHibernateSupport:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsRequireHibernateSupport9PMU4"
+          MaxSpotPriceAsPercentageOfOptimalOnDemandPrice:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMaxSpotPriceAsPercentageOfOptimalOnDemandPrice53GY2"
+          BaselineEbsBandwidthMbps:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsMaxqsluF"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsMinfcIm5"
+          SpotMaxPricePercentageOverLowestPrice:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsSpotMaxPricePercentageOverLowestPricepgwsn"
+          AcceleratorNames:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorNamesD6xbc"
+          AcceleratorTotalMemoryMiB:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBMax70fwY"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsAcceleratorTotalMemoryMiBMinl305O"
+          OnDemandMaxPricePercentageOverLowestPrice:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsOnDemandMaxPricePercentageOverLowestPriceg01pt"
+          BurstablePerformance:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsBurstablePerformanceoJBNQ"
+          MemoryMiB:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryMiBMax6iBSk"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsMemoryMiBMinsqSTR"
+          TotalLocalStorageGB:
+            Max:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsTotalLocalStorageGBMaxw4Kis"
+            Min:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataInstanceRequirementsTotalLocalStorageGBMinOCwN8"
+        CapacityReservationSpecification:
+          CapacityReservationTarget:
+            CapacityReservationResourceGroupArn:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetCapacityReservationResourceGroupArnCsTXY"
+            CapacityReservationId:
+              Ref: "EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetCapacityReservationIdGVXdV"
+          CapacityReservationPreference:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCapacityReservationSpecificationCapacityReservationPreferenceCwJ1a"
+        RamDiskId:
+          Ref: "EC2LaunchTemplateLaunchTemplateDataRamDiskIdEjgty"
+        CreditSpecification:
+          CpuCredits:
+            Ref: "EC2LaunchTemplateLaunchTemplateDataCreditSpecificationCpuCreditsPq3uW"
+      LaunchTemplateName: "Step7"
+  EC2RouteTableKY:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::RouteTable"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId: "vpc-09be6980fce5b6fad"
+      Tags:
+      - Value: "step 4-rtb-private1-us-east-1a"
+        Key: "Name"
+  ElasticLoadBalancingV2TargetGroupTargetgroupTargetStep600b89b000c36f88b:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ElasticLoadBalancingV2::TargetGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      IpAddressType: "ipv4"
+      HealthCheckIntervalSeconds: 30
+      Matcher:
+        HttpCode: "200"
+      HealthCheckPath: "/cafe"
+      Port: 80
+      Targets: []
+      HealthCheckEnabled: true
+      ProtocolVersion: "HTTP1"
+      UnhealthyThresholdCount: 2
+      HealthCheckTimeoutSeconds: 5
+      Name: "TargetStep6"
+      VpcId: "vpc-09be6980fce5b6fad"
+      HealthyThresholdCount: 5
+      HealthCheckProtocol: "HTTP"
+      TargetGroupAttributes:
+      - Value: "lb_cookie"
+        Key: "stickiness.type"
+      - Value: "86400"
+        Key: "stickiness.app_cookie.duration_seconds"
+      - Value: "1"
+        Key: "target_group_health.dns_failover.minimum_healthy_targets.count"
+      - Value: "use_load_balancer_configuration"
+        Key: "load_balancing.cross_zone.enabled"
+      - Value: "86400"
+        Key: "stickiness.lb_cookie.duration_seconds"
+      - Value: "off"
+        Key: "target_group_health.dns_failover.minimum_healthy_targets.percentage"
+      - Value: "false"
+        Key: "stickiness.enabled"
+      - Value: "off"
+        Key: "target_group_health.unhealthy_state_routing.minimum_healthy_targets.percentage"
+      - Value: "0"
+        Key: "slow_start.duration_seconds"
+      - Value: "300"
+        Key: "deregistration_delay.timeout_seconds"
+      - Value: "1"
+        Key: "target_group_health.unhealthy_state_routing.minimum_healthy_targets.count"
+      - Value: "off"
+        Key: "load_balancing.algorithm.anomaly_mitigation"
+      - Value: ""
+        Key: "stickiness.app_cookie.cookie_name"
+      - Value: "round_robin"
+        Key: "load_balancing.algorithm.type"
+      TargetType: "instance"
+      HealthCheckPort: "traffic-port"
+      Protocol: "HTTP"
+      Tags: []
+  EC2RouteTableWq:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::RouteTable"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId: "vpc-09be6980fce5b6fad"
+  EC2RouteDS:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      DestinationPrefixListId: "pl-63a5400a"
+      VpcEndpointId: "vpce-0cd01815aa1577176"
+      RouteTableId: "rtb-052101dae96761fe9"
+  ElasticLoadBalancingV2ListenerListenerappStep5e88141d0476bfed45d0cabed2f7b5a77:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ElasticLoadBalancingV2::Listener"
+    DeletionPolicy: "Retain"
+    Properties:
+      ListenerAttributes:
+      - Value: "true"
+        Key: "routing.http.response.server.enabled"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_headers.header_value"
+      - Value: ""
+        Key: "routing.http.response.x_frame_options.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_methods.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_origin.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_allow_credentials.header_value"
+      - Value: ""
+        Key: "routing.http.response.x_content_type_options.header_value"
+      - Value: ""
+        Key: "routing.http.response.content_security_policy.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_expose_headers.header_value"
+      - Value: ""
+        Key: "routing.http.response.strict_transport_security.header_value"
+      - Value: ""
+        Key: "routing.http.response.access_control_max_age.header_value"
+      Protocol: "HTTP"
+      LoadBalancerArn: "arn:aws:elasticloadbalancing:us-east-1:406169238924:loadbalancer/app/Step5/e88141d0476bfed4"
+      DefaultActions:
+      - Order: 1
+        TargetGroupArn: "arn:aws:elasticloadbalancing:us-east-1:406169238924:targetgroup/TargetStep6/00b89b000c36f88b"
+        Type: "forward"
+        ForwardConfig:
+          TargetGroupStickinessConfig:
+            Enabled: false
+            DurationSeconds: 3600
+          TargetGroups:
+          - TargetGroupArn: "arn:aws:elasticloadbalancing:us-east-1:406169238924:targetgroup/TargetStep6/00b89b000c36f88b"
+            Weight: 1
+      Port: 80
+  EC2RouteOw:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      GatewayId: "igw-0d3bc570aeb862c40"
+      RouteTableId: "rtb-0c24b6de0e78281b1"
+      DestinationCidrBlock: "0.0.0.0/0"
+  IAMInstanceProfileElb:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::IAM::InstanceProfile"
+    DeletionPolicy: "Retain"
+    Properties:
+      Path: "/"
+      Roles:
+      - "elb"
+      InstanceProfileName: "elb"
+  EC2SubnetBu:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Subnet"
+    DeletionPolicy: "Retain"
+    Properties:
+      MapPublicIpOnLaunch: false
+      EnableDns64: false
+      VpcId: "vpc-09be6980fce5b6fad"
+      AvailabilityZoneId: "use1-az1"
+      PrivateDnsNameOptionsOnLaunch:
+        EnableResourceNameDnsARecord: false
+        HostnameType: "ip-name"
+        EnableResourceNameDnsAAAARecord: false
+      AvailabilityZone: "us-east-1a"
+      CidrBlock: "10.0.2.0/23"
+      Ipv6Native: false
+      Tags:
+      - Value: "step 4-subnet-private1-us-east-1a"
+        Key: "Name"
+  EC2SubnetNetworkAclAssociationRp:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetNetworkAclAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      NetworkAclId: "acl-089e20dd665e32b3f"
+      SubnetId: "subnet-02d27dc1a60888cdc"
+  EC2RouteCa:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      RouteTableId: "rtb-0c24b6de0e78281b1"
+      DestinationCidrBlock: "10.0.0.0/16"
+      GatewayId: "local"
+      VpcEndpointId: "local"
+  EC2SecurityGroupIJ:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SecurityGroup"
+    DeletionPolicy: "Retain"
+    Properties:
+      GroupDescription: "allows access from workstation"
+      GroupName: "Bastion"
+      VpcId: "vpc-09be6980fce5b6fad"
+      SecurityGroupIngress:
+      - CidrIp: "75.72.214.75/32"
+        IpProtocol: "tcp"
+        FromPort: 22
+        ToPort: 22
+      SecurityGroupEgress:
+      - CidrIp: "0.0.0.0/0"
+        IpProtocol: "-1"
+  EC2RoutePL:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::Route"
+    DeletionPolicy: "Retain"
+    Properties:
+      RouteTableId: "rtb-08cbba9c3ce2acef4"
+      DestinationCidrBlock: "10.0.0.0/16"
+      GatewayId: "local"
+      VpcEndpointId: "local"
+  EC2VPC:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::VPC"
+    DeletionPolicy: "Retain"
+    Properties:
+      CidrBlock: "10.0.0.0/16"
+      EnableDnsSupport: true
+      InstanceTenancy: "default"
+      EnableDnsHostnames: true
+      Tags:
+      - Value: "step 4-vpc"
+        Key: "Name"
+  EC2SubnetRouteTableAssociationOn:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::SubnetRouteTableAssociation"
+    DeletionPolicy: "Retain"
+    Properties:
+      RouteTableId: "rtb-052101dae96761fe9"
+      SubnetId: "subnet-083ccabf43890470d"
+  EC2RouteTable:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::EC2::RouteTable"
+    DeletionPolicy: "Retain"
+    Properties:
+      VpcId: "vpc-09be6980fce5b6fad"
+      Tags:
+      - Value: "step 4-rtb-private2-us-east-1b"
+        Key: "Name"
+  ElasticLoadBalancingV2LoadBalancerLoadbalancerappStep5e88141d0476bfed4:
+    UpdateReplacePolicy: "Retain"
+    Type: "AWS::ElasticLoadBalancingV2::LoadBalancer"
+    DeletionPolicy: "Retain"
+    Properties:
+      IpAddressType: "ipv4"
+      SecurityGroups:
+      - "sg-084f58c68da58963c"
+      LoadBalancerAttributes:
+      - Value: ""
+        Key: "access_logs.s3.prefix"
+      - Value: "append"
+        Key: "routing.http.xff_header_processing.mode"
+      - Value: "true"
+        Key: "routing.http2.enabled"
+      - Value: "false"
+        Key: "waf.fail_open.enabled"
+      - Value: "false"
+        Key: "routing.http.x_amzn_tls_kx.enabled"
+      - Value: ""
+        Key: "connection_logs.s3.bucket"
+      - Value: "false"
+        Key: "access_logs.s3.enabled"
+      - Value: "false"
+        Key: "zonal_shift.config.enabled"
+      - Value: "defensive"
+        Key: "routing.http.desync_mitigation_mode"
+      - Value: ""
+        Key: "connection_logs.s3.prefix"
+      - Value: ""
+        Key: "health_check_logs.s3.prefix"
+      - Value: "false"
+        Key: "routing.http.x_amzn_tls_version_and_cipher_suite.enabled"
+      - Value: "false"
+        Key: "routing.http.preserve_host_header.enabled"
+      - Value: "true"
+        Key: "load_balancing.cross_zone.enabled"
+      - Value: "false"
+        Key: "health_check_logs.s3.enabled"
+      - Value: ""
+        Key: "health_check_logs.s3.bucket"
+      - Value: "false"
+        Key: "routing.http.xff_client_port.enabled"
+      - Value: ""
+        Key: "access_logs.s3.bucket"
+      - Value: "false"
+        Key: "deletion_protection.enabled"
+      - Value: "3600"
+        Key: "client_keep_alive.seconds"
+      - Value: "false"
+        Key: "routing.http.drop_invalid_header_fields.enabled"
+      - Value: "false"
+        Key: "connection_logs.s3.enabled"
+      - Value: "60"
+        Key: "idle_timeout.timeout_seconds"
+      Subnets:
+      - "subnet-02d27dc1a60888cdc"
+      - "subnet-040f85bccd4e2d831"
+      Type: "application"
+      Scheme: "internet-facing"
+      EnablePrefixForIpv6SourceNat: "off"
+      Tags: []
+      Name: "Step5"
+      SubnetMappings:
+      - SubnetId: "subnet-02d27dc1a60888cdc"
+      - SubnetId: "subnet-040f85bccd4e2d831"
